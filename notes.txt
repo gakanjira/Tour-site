@@ -1,0 +1,78 @@
+%
+czcionka -> względem rodzica
+długość -> względem szerokości rodzica
+
+em
+czcionka -> względem rodzica
+długość -> względem obecnego elementu
+
+rem
+zawsze względem roota
+
+vh procentowa wysokość okna
+
+vw procentowa szerokość okna
+
+domyślne wartości przeglądarki
+czcionka: 16px;
+body: margin 8px;
+h: font-size: 1.17em; margin-top: 1em; margin-bottom: 1em;
+
+* nadpisanie domyślnych wartości przeglądarki(należy uwzględnić pseudoelementy)
+rozmiar czcionki html w %, dla lepszego skalowania
+
+box-sizing wymuszamy dziedziczenie, ułatwia to dołączanie wtyczek itp.
+border-box: border i padding nie zostaną dodane do szerokośći i wysokości zdefiniowanego pola
+
+kaskadowość - rozwiązywanie konfliktów:
+
+1) !impoertanat user > !impoertanat autor > deklaracje autora > dek user > domyślne przeglądarki  
+
+2) _ _ _ _ inline > id > klasy i pseudoklasy >  elementy,pseudoelementy
+
+3) kolejność występowania(ostatni wczytany zostanie zaimplementowany)
+
+VFM algorytm liczy:
+wymiary pól(box model: wys, szer, padd, margin, border, content, fill area(bez marginesu)),
+typy pól,
+ich pozycjonowanie,
+kontekst stosu(zakładam, że chodzi o el znajdujący się aktualnie na szczycie stosu, który będzie pierwszy w kolejnośći przetwarzany(z-index, transform, filter)),
+inne elementy w drzewie,
+rozmiary obrazów, ekranu itp.(el. zewnętrzne).
+tak wygląda proces budowania strony przez przeglądarkę
+
+
+display types:
+block - zajmują 100% szerokości rodzica,
+wyświetlają sie pod sobą(verticaly)
+
+inline - zajmuje tyle miejsca ile potrzebuje, nie można definiować wysokości i szerokości, paddingi i marginesy tylko lewo i prawo
+
+inline-block - jest mixem tych wyżej, zajmuje tylko tyle miejsca, co jego zawartość(inline),ale wyświetlany jest jako blok,(block) kolejny nie jest wyświetlany w nowej lini(inline)
+
+
+schematy pozycjonowania:
+normal flow - relative, elementy są położone w naturalnym porządku w kodzie
+
+float - jest przesunięty maksymalnie w lewo lub prawo elementu, w którm się znajduje, tekst zostanie wyświetlony wokół niego, container nie dostosuje wysokości do tego elementu, przez co trzeba używać clear: both;, aby kolejny element wyświetlił się w nowej lini
+
+absolute, fixed - nie ma żadnego wpływu na otaczające go elementy może na nie nachodzić, ustawiamy go względem konetenera, w którm się znajduje
+
+
+komponenty powinny być w stanie do wielokrotnego użycia nie tylko w naszym projekcie, ale też w innych, niezależne
+
+BEM(Block Element Modifer)
+.block{}
+.block__element{}
+.block__element--modifier{}
+
+Wzór 7-1:
+base
+components
+layouts
+pages
+themes
+abstract
+vendors
+
+main
