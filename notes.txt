@@ -76,3 +76,25 @@ abstract
 vendors
 
 main
+
+
+Sass pozwala na operacje bezpośrednio w cssie, funkcje, importy, zmienne itd.
+
+&- ścieżka przed elementem
+
+@function a($b) {
+    @return $b;
+}
+
+@mixin a ($b){
+    css: fsaa;
+}                                 Kilka linijek wspólnych css dla kilku elementów
+@include a($c);
+
+
+
+%a-placeholder                        zdefiniowanie dla rozszerzeń elementu wspólnych cech
+@extend %a-placeholder
+
+
+kompilujemy sassa w package.json skrypt "compile:sass": "node-sass: plik.sass plik.css" flagi: -w automatycznie uruchomi po zmianach
