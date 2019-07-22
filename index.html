@@ -30,7 +30,7 @@
           <li class="navigation__item"><a href="#" class="navigation__link">01 About Natours</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">02 Your benefits</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">03 Popular tours</a></li>
-          <li class="navigation__item"><a href="#" class="navigation__link">04 Stories</a></li>
+          <li class="navigation__item"><a href="#stories" class="navigation__link">04 Stories</a></li>
           <li class="navigation__item"><a href="#" class="navigation__link">05 Book now</a></li>
         </ul>
       </nav>
@@ -149,7 +149,7 @@
         </div>
       </section>
 
-      <section class="section-tours">
+      <section class="section-tours" id="section-tours">
         <div class="u-center-text u-margin-bottom-big">
           <h2 class="heading-secondary">
             Most popular tours
@@ -183,7 +183,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$299</p>
                   </div>
-                  <a href="" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -216,7 +216,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$499</p>
                   </div>
-                  <a href="" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -249,7 +249,7 @@
                     <p class="card__price-only">Only</p>
                     <p class="card__price-value">$899</p>
                   </div>
-                  <a href="" class="btn btn--white">Book now</a>
+                  <a href="#popup" class="btn btn--white">Book now</a>
                 </div>
               </div>
             </div>
@@ -261,7 +261,7 @@
         </div>
       </section>
 
-      <section class="section-stories">
+      <section class="section-stories" id="stories">
         <div class="bg-video">
           <video class="bg-video__content" autoplay muted loop>
             <source src="img/video.mp4" type="video/mp4" />
@@ -431,6 +431,21 @@
         </div>
       </div>
     </footer>
+
+    <div class="popup" id="popup">
+        <div class="popup__content">
+            <div class="popup__left">
+                <img src="img/nat-8.jpg" alt="tour photo" class="popup__img">
+                <img src="img/nat-9.jpg" alt="tour photo" class="popup__img">
+            </div>
+            <div class="popup__right">
+                <a href="#section-tours" class="popup__close">&times;</a>
+                <h2 class="heading-secondary u-margin-bottom-medium">Start booking now</h2>
+                <p class="paragraph popup__text">Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet exceptur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet exceptur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet exceptur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet exceptur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet exceptur Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus, adipisci beatae cum eos eveniet excepturi ipsum labore numquam odio omnis pariatur perferendis quae qui quod saepe suscipit veniam veritatis voluptates! Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusamus adipisci cum ea error, eum illum natus officia veniam. Commodi consequuntur debitis ea eaque earum inventore laborum laudantium nisi obcaecati repellendus!</p>
+                <a href="#" class="btn btn--green">Book now</a>
+            </div>
+        </div>
+    </div>
     <!-- <section class="grid-test">
 
         <div class="row">
