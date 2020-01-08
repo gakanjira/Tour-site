@@ -11,6 +11,10 @@
     clip-path: polygon(0 0, 100% 0, 100% 100%, 0 75vh);
     position: relative;
   
+    @include respond(phone) {
+      clip-path: polygon(0 0, 100% 0, 100% 100%, 0 85vh);
+    }
+
     &__logo-box {
       position: absolute;
       top: 4rem;

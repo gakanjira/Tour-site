@@ -2,21 +2,29 @@
     background-color: rgba($white, .8);
     font-size: 1.5rem;
     padding: 2.5rem;
-    width: 27rem;
     text-align: center;
     border-radius: 3px;
     box-shadow: 0 1.5rem 4rem rgba($black, .15);
-    transition: all .3s;
-    transform: skewY(7deg);
+    transition: transform .3s;
+
+    @include respond(tablet) {
+        padding: 2rem;
+    }
 
     &__icon {
-        height: 125px;
-        width: auto;
+        font-size: 3rem;
         margin-bottom: .5rem;
         display: inline-block;
+        background-image: linear-gradient(to right, $color-primary-light, $color-primary-dark);
+        -webkit-background-clip: text;
+        color: transparent;
+
+        @include respond(tablet) {
+            margin-bottom: 0;
+        }
     }
 
     &:hover {
-        transform: translateY(-1.5rem) skewY(7deg) scale(1.05);
+        transform: translateY(-1.5rem) scale(1.05);
     }
 }
